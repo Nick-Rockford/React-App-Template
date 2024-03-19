@@ -1,0 +1,28 @@
+<script type="text/babel">
+
+    const App = () => {
+    
+      const [activeTab, setActiveTab] = React.useState("home");
+    
+      const page = () => {
+        switch(activeTab) {
+          case "home":
+            return <HomePage />
+        }
+      }
+        return (
+            <>
+        <Navbar setActiveTab={setActiveTab} />
+        <div class="container pt-4">
+          {page()}
+        </div>
+        <Footer/>
+        </>
+        )
+    }
+    $(document).ready(function () {
+      ReactDOM.render(<App />, document.getElementById("app-component"));
+    });
+    </script>
+    <!-- TODO 
+    add any new pages as refered to in lines 9 and 10 -->

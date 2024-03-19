@@ -1,0 +1,8 @@
+<script>
+  function loadPage(pageName) {
+    $(".nav-link").removeClass("active");
+    $(`#${pageName}_link`).addClass("active");
+    $(".forms").addClass("hidden");
+    $(`#${pageName}`).removeClass("hidden");
+  }
+</script>
